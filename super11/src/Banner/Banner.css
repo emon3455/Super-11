@@ -1,0 +1,22 @@
+.banner{
+    background-color: blanchedalmond;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 50vw;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    background-color: #8437cc;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
