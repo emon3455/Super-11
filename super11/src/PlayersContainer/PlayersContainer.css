@@ -1,0 +1,40 @@
+.banner{
+    background-color: rgb(250, 212, 156);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h3{
+    color: #a153eb;
+}
+input{
+    width: 50vw;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.banner button{
+    padding: 0.5rem 1rem;
+    background-color: #8437cc;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+.box-1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    padding: 0.5rem;
+}
+.box-2{
+    background-color: aqua;
+}
