@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { addToDB } from '../fakeDB';
+import SelectedPlayer from '../SelectedPlayer/SelectedPlayer';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
 import "./PlayersContainer.css"
 
 const PlayersContainer = () => {
 
     const [players , setPlayers] = useState([]);
-
 
     const handleSubmit =(event)=>{
         event.preventDefault()
@@ -17,7 +18,12 @@ const PlayersContainer = () => {
 
     }
 
-
+    const [cart,setCart] = useState([])
+    const handleSelectedPlayer=(player)=>{
+        const newPlayer = [...cart, player]
+        setCart(newPlayer);
+        addToDB(player.idPlayer)
+    }
 
     return (
 
@@ -47,14 +53,22 @@ const PlayersContainer = () => {
                 <div className="box-1">
 
                     {
-                        players.map(player=> <SinglePlayer player={player} key={player.idPlayer}></SinglePlayer>)
+                        players.map(player=> <SinglePlayer
+                            player={player}
+                            key={player.idPlayer}
+                            handleSelectedPlayer={handleSelectedPlayer}
+                        >
+
+                        </SinglePlayer>)
                     }
 
                 </div>
 
                 <div className="box-2">
 
-                    
+                    <SelectedPlayer cart={cart}>
+
+                    </SelectedPlayer>
 
                 </div>
 

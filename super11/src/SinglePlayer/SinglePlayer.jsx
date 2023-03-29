@@ -1,10 +1,11 @@
 import React from 'react';
+import { addToDB } from '../fakeDB';
 import "./SinglePlayer.css"
 
 const SinglePlayer = (props) => {
     
-    console.log(props.player);
-    const {strPlayer,strNationality, strSport,strThumb,strDescriptionEN} = props.player;
+    const {idPlayer,strPlayer,strNationality, strSport,strThumb,strDescriptionEN} = props.player;
+    const handleSelectedPlayer = props.handleSelectedPlayer;
  
     return (
         <>
@@ -22,8 +23,8 @@ const SinglePlayer = (props) => {
                          {strDescriptionEN? strDescriptionEN.slice(0,120)+"..." : "No Information available"}
                          <br />
                     </p>
-                    <button>
-                        Sign In
+                    <button onClick={()=> handleSelectedPlayer(props.player)}>
+                        Signing In
                     </button>
 
                 </div>
