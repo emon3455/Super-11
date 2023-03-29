@@ -27,7 +27,7 @@ const PlayersContainer = () => {
             <div className="banner">
                 <div className="">
 
-                    <h3>Search Player by Name</h3>
+                    <h2>Search Player by Name</h2>
 
                     <form onSubmit={handleSubmit}>
 
@@ -53,6 +53,8 @@ const PlayersContainer = () => {
                 </div>
 
                 <div className="box-2">
+
+                    
 
                 </div>
 
